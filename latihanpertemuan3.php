@@ -20,8 +20,6 @@ j = kolom  -->
      <?php $j++; }  ?>
      </tr>
      <?php $i++; }  ?>
-     
-        
     </table>
 </body>
 </html>

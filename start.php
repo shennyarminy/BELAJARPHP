@@ -1,30 +1,48 @@
 <?php 
-// sintaks php 
-// standar output biasanya adalah echo dan print, untuk mencetak variabel, atau print_r khusus array, 
-// var_dump untuk melihat isi variabel tersebut
+$mahasiswa = [
+    [
+        "nama" => "Shenny Berliana Arminy",
+        "NIM" => "H110117144",
+        "email" => "arminy.berliana@gmail.com",
+        "jurusan" => "Sistem Informasi",
+        "gambar" => "can yaman"
 
-// echo "Shenny Berliana Arminy";
-// print_r("Shenny Berliana Arminy");
+    ],
 
-// var_dump("Shenny Berliana"); 
-//  penulisan PHP yang sering digunakan adlaah penulisan PHP di dalam HTML
-// variabel di php pake tanda $ 
-// variabel tidak boleh diawali dengan angka tapi boleh mengandung angka. 
-// interpolasi adalah apakah dalam string terdapat variabel atau tidak. 
-// penggabuan string / concatenation / concat dengan menggunakan titik (.)
-// $nama = "Shenny Berliana";
-// $nama_depan = "Shenny";
-// $nama_belakang = "Berliana"; 
-// echo $nama_depan ." ". $nama_belakang;
-// pengulangan b
-for($i=1; $i<=5; $i++){
-    for($j=1; $j<=$i; $j++){ #pada keadaan $i dia berhenti.
-        echo"*";
-        if($j<$i){ #jika var j lebih kecil dari var i, maka keadaannya echo 
-            echo" ";
-        }
-    }
-     echo"<br>";
-    }
+    [
+        "nama" => "Zella Alqadrie",
+        "NIM" => "H110117121",
+        "email" => "zellaalqadrie@gmail.com",
+        "jurusan" => "Sistem Informasi",
+        "gambar" => "can yaman.png"
+    ]
+  
+    ]
 
- ?>
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan </title>
+</head>
+<body>
+    <h1>Daftar Mahasiswa</h1>
+
+    <?php foreach ($mahasiswa as $mhs):?>
+    <ul>
+        <li>
+             <img src="img/<?= $mhs ["gambar"] ?>"  >
+        </li>
+        <li>Nama    :<?= $mhs ["nama"];  ?></li>
+        <li>NIM     :<?= $mhs ["NIM"];  ?></li>
+        <li>Jurusan :<?= $mhs ["jurusan"];  ?></li>
+        <li>Email   :<?= $mhs ["email"];  ?></li>
+    </ul>
+    <?php endforeach;  ?>
+</body>
+</html>
