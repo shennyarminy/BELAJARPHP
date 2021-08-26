@@ -1,3 +1,5 @@
+<!-- variable scope / lingkup variabel  -->
+
 <?php 
 $mahasiswa = [
     [
@@ -17,7 +19,6 @@ $mahasiswa = [
         "gambar" => "can yaman.png"
     ]
     ]
-
 ?>
 
 <!DOCTYPE html>
@@ -26,21 +27,16 @@ $mahasiswa = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan </title>
+    <title>Document</title>
 </head>
 <body>
     <h1>Daftar Mahasiswa</h1>
-
-    <?php foreach ($mahasiswa as $mhs):?>
     <ul>
+    <?php foreach ($mahasiswa as $mhs) :?>
         <li>
-             <img src="img/<?= $mhs ["gambar"] ?>"  >
+            <a href="get1.php?nama=<?=$mhs["nama"];  ?>&NIM=<?= $mhs["NIM"] ?>&email= <?= $mhs["email"]?>&jurusan=<?=$mhs["jurusan"] ?>"><?= $mhs["nama"]; ?></a>
         </li>
-        <li>Nama    :<?= $mhs ["nama"];  ?></li>
-        <li>NIM     :<?= $mhs ["NIM"];  ?></li>
-        <li>Jurusan :<?= $mhs ["jurusan"];  ?></li>
-        <li>Email   :<?= $mhs ["email"];  ?></li>
-    </ul>
     <?php endforeach;  ?>
+    </ul>
 </body>
 </html>

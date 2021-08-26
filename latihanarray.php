@@ -27,5 +27,6 @@ $mahasiswa = [
         <li>Email   :<?= $mhs [3];  ?></li>
     </ul>
     <?php endforeach;  ?>
+       
 </body>
 </html>
