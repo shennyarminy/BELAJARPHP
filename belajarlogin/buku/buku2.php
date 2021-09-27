@@ -15,7 +15,7 @@ $buku = query("SELECT * FROM bukushenny");
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
   <!-- my css -->
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 
   <title>My Portfolio | Shenny Berliana</title>
 </head>
@@ -93,45 +93,47 @@ $buku = query("SELECT * FROM bukushenny");
     </svg>
       </div>
     </div>
-    <!-- kelas yang berisikan tabel buku -->
-    <h1>Halaman Buku</h1>
-    <table border="1" cellpadding="10" cellspacing="0">
-      <tr class="judul">
-        <th>No</th>
+    
+   
+  </section>
+  <!-- About akhir -->
+
+<!-- body  -->
+  </head>
+  <link rel="stylesheet" href="style.css">
+<body >
+  <h1 class= "tabel">HALAMAN MAHASISWA</h1>
+    <table border="5" cellpadding="10" cellspacing="0" align="center">
+      <tr>
+        <th >No</th>
         <th>Judul Buku</th>
         <th>Pengarang</th>
         <th>Tahun Terbit</th>
         <th>Foto</th>
       </tr>
+      
 
       <?php $i = 1;  ?>
       <?php foreach($buku as $bku) : ?>
       <tr>
         <td><?= $i; ?></td>
-        <!-- <td><img src="img/" <?php echo $bku ["gambar"];  ?> width="50"></td>
+
         <td><?= $bku ["nama_buku"]  ?></td>
         <td><?= $bku["pengarang"] ?></td>
-        <td><?= $bku["tahun"] ?></td> -->
+        <td><?= $bku["tahun"]?></td>
+        <td><img src="img/<?php echo $bku ["gambar"];?>" width="50"></td>
         
-       
-        <td> Cintaku pergi </td>
-        <td>Shenny Berliana </td>
-        <td>2021</td>
       </tr>
         <?php $i++;  ?>
-        <?php endforeach;  ?>
-    
+    <?php endforeach;  ?>
     </table>
 
+</head>
+</body>
 
-    <div>
 
 
-    </div>
-   
-  </section>
-  <!-- About akhir -->
-
+<!-- akhir body  -->
   <!-- Project  -->
  
   <!-- akhir project  -->

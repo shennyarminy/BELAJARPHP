@@ -161,3 +161,12 @@ h1 {
 .lead {
   color: #e3e3e3;
 }
+
+table {
+  border : 5px;
+   align-items : center;
+}
+
+.tabel {
+  color :rgba(255, 255, 255, 0.1);
+}
